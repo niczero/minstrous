@@ -6,6 +6,7 @@
     "build": "mkdir -p public; vue-cli-service build",
     "check": "vue-cli-service build --verbose",
     "lint": "vue-cli-service lint",
+    "morbo": "dep/bin/morbo -l 'http://*:3030' bin/sampler &>>log/development.log",
     "serve": "vue-cli-service serve",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit \"test/unit/**/*.spec.js\""

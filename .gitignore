@@ -1,9 +1,10 @@
 .DS_Store
-node_modules
+node_modules/
+/config/
+/dep/
 /public/
-
-/tests/e2e/videos/
 /tests/e2e/screenshots/
+/tests/e2e/videos/
 
 # local env files
 .env.local
@@ -22,3 +23,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# git update-index --skip-worktree templates/scripts.html.ep
+# git update-index --skip-worktree templates/styles.html.ep

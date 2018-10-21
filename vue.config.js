@@ -1,3 +1,4 @@
+const AssetPartialsPlugin = require('./build/asset-partials-webpack-plugin')
 const BrotliPlugin = require('brotli-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const zopfli = require('@gfx/zopfli')
@@ -19,13 +20,20 @@ if (process.env.NODE_ENV === "production") {
     new BrotliPlugin({
       test: compressionTest,
       minRatio: 0.9
-    })
+    }),
+    new AssetPartialsPlugin([{
+      to: '../templates/styles.html.ep',
+      types: ['css']
+    }, {
+      to: '../templates/scripts.html.ep',
+      types: ['js']
+    }])
   ]
 }
 
 module.exports = {
   assetsDir: 'dist',
-  baseUrl: process.env.NODE_ENV === 'production' ? '/sampler/' : '/',
+  baseUrl: process.env.NODE_ENV === 'production' ? '/' : '/',
   chainWebpack: config => {
     config.plugin('copy').tap(args => {
       return [[

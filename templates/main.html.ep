@@ -1,0 +1,10 @@
+% title 'Sampler';
+<noscript>
+  <strong>Sorry but Mojo-Vue Sampler does not work without javascript enabled.
+  Please enable it to continue.</strong>
+</noscript>
+
+<img alt="Vue logo" src="/img/logo.png">
+<div data-nature="vue">
+  <hello-world msg="<%= 'Welcome to Mojo-Vue Sampler!' %>"></hello-world>
+</div>
