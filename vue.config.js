@@ -1,6 +1,6 @@
 module.exports = {
   assetsDir: 'dist',
-  baseUrl: '/sampler/',
+  baseUrl: process.env.NODE_ENV === 'production' ? '/sampler/' : '/',
   chainWebpack: config => {
     config.plugin('copy').tap(args => {
       return [['./src/favicon.ico']]
@@ -11,6 +11,7 @@ module.exports = {
       return args
     })
   },
+  configureWebpack: {},
   indexPath: 'index.html',
   outputDir: 'public',
   productionSourceMap: false,
