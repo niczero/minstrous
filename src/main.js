@@ -3,8 +3,10 @@ import HelloWorld from './components/HelloWorld.vue'
 import store from './store'
 
 import './style/index.scss'
+import Bootstrap from 'bootstrap-vue'
 
 Vue.config.productionTip = false
+Vue.use(Bootstrap)
 
 /* eslint-disable no-new */
 new Vue({

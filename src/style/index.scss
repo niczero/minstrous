@@ -1,1 +1,3 @@
-@import './app.scss'
+@import './override-bootstrap.scss';
+@import 'bootstrap/scss/bootstrap.scss';
+@import './app.scss';
