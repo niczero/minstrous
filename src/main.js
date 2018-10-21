@@ -1,10 +1,16 @@
 import Vue from 'vue'
-import App from './App.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import store from './store'
+
+import './style/index.scss'
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
 new Vue({
-  store,
-  render: h => h(App)
-}).$mount('#app')
+  components: {
+    HelloWorld
+  },
+  el: '[data-nature="vue"]',
+  store
+})
