@@ -2,7 +2,7 @@ package Sampler;
 use Mojolicious -base;
 use 5.014;
 
-our $VERSION = 0.001;
+our $VERSION = 0.011;
 
 use Mojo::Util 'md5_sum';
 
@@ -32,6 +32,7 @@ sub startup {
   $r->get('/' => sub { $_[0]->redirect_to($_[0]->url_with('main')) })
     ->name('base');
   $r->get('/main')->to(template => 'main')->name('main');
+  $r->get('/bootstrap')->to(template => 'bootstrap-vue')->name('bootstrap');
 }
 
 1;
