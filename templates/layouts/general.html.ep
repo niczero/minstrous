@@ -6,13 +6,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="/favicon.ico">
 <title><%= title %></title>
-%= include 'styles'
+%= include '_styles'
 </head>
-<body>
-%= include 'topbar'
-%= include 'sidebar'
+<body class="barred">
+%= include '_topbar'
+%= include '_sidebar'
+<main class="container-fluid">
+<div class="barred__content">
 <%= content %>
-%= include 'footer'
-%= include 'scripts'
+</div>
+%= include '_footer'
+</main>
+%= include '_scripts'
 </body>
 </html>

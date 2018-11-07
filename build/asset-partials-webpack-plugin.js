@@ -50,8 +50,8 @@ AssetPartialsPlugin.prototype.apply = function (compiler) {
       }
     })
 
-    fs.writeFile('templates/styles.html.ep', styles, callback)
-    fs.writeFile('templates/scripts.html.ep', scripts, callback)
+    fs.writeFile('templates/_styles.html.ep', styles, callback)
+    fs.writeFile('templates/_scripts.html.ep', scripts, callback)
   })
 }
 

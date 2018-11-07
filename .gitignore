@@ -24,5 +24,5 @@ yarn-error.log*
 *.sln
 *.sw*
 
-# git update-index --skip-worktree templates/scripts.html.ep
-# git update-index --skip-worktree templates/styles.html.ep
+# git update-index --skip-worktree templates/_scripts.html.ep
+# git update-index --skip-worktree templates/_styles.html.ep
