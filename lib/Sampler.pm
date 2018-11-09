@@ -8,10 +8,11 @@ use Mojo::Util 'md5_sum';
 
 our $Name = __PACKAGE__;
 
-sub startup {
+sub startup { shift->set_up->add_routes }
+
+sub set_up {
   my ($self) = @_;
-  die "Should not be run as root\n" unless $< and $>;
-  my $home = $self->home;
+  die "Best not run as root\n" unless $< and $>;
 
   push @{$self->commands->namespaces}, $Name .'::Command';
   my $config = $self->plugin(Config =>
@@ -28,11 +29,19 @@ sub startup {
   $self->sessions->default_expiration($config->{expiration})
     ->cookie_name(lc $Name);
 
+  return $self;
+}
+
+sub add_routes {
+  my ($self) = @_;
   my $r = $self->routes;
+
   $r->get('/' => sub { $_[0]->redirect_to($_[0]->url_with('main')) })
     ->name('base');
-  $r->get('/main')->to(template => 'main')->name('main');
-  $r->get('/bootstrap')->to(template => 'bootstrap-vue')->name('bootstrap');
+
+  $r->get($_) for qw(about main);
+
+  return $self;
 }
 
 1;

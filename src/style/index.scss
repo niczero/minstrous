@@ -1,4 +1,5 @@
-@import './override-bootstrap.scss';
-@import 'bootstrap/scss/bootstrap.scss';
-@import '~/bootstrap-vue/dist/bootstrap-vue.css';
-@import './app.scss';
+@import '~material-colors/dist/colors.scss';
+@import './variables.scss';
+@import '~bootstrap/scss/bootstrap-reboot.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';

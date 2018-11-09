@@ -4,7 +4,17 @@
   Please enable it to continue.</strong>
 </noscript>
 
-<img alt="Vue logo" src="/img/logo.png">
-<div data-nature="vue">
-  <hello-world msg="<%= 'Welcome to Mojo-Vue Sampler!' %>"></hello-world>
-</div>
+<a href="https://mojolicious.org"><img src="/3rd/mojo_logo.png" alt="mojolicious"></a>
+<a href="https://vuejs.org"><img src="/3rd/vue_logo.png" alt="vue.js"></a>
+<p>To implement additional functionality into your web app it is always easier
+  if you have a working example to learn/copy from.  Too many times I have
+  wanted to try out somebody's idea, but forgotten where I saw it.  Or I have
+  some notes in front of me, but my app is already too complex for
+  trial-and-error to be a viable route.  Or I can see an opensource app has what
+  I need, but getting to see that working in practice is going to take just too
+  much time and energy.  That's where this 'app' comes in.</p>
+<p>It is certainly possible to build an app using this sampler as an initial
+  seed, but I suspect most usage will simply be examining the implementation of
+  some feature, trying that out in codepen, then injecting it into your existing
+  app.  With that in mind, there will not be any upgrade path between
+  releases.</p>

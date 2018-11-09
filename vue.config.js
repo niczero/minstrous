@@ -3,10 +3,18 @@ const BrotliPlugin = require('brotli-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const zopfli = require('@gfx/zopfli')
 
-let plugins = []
-if (process.env.NODE_ENV === "production") {
+let plugins = [
+  new AssetPartialsPlugin([{
+    to: '../templates/_styles.html.ep',
+    types: ['css']
+  }, {
+    to: '../templates/_scripts.html.ep',
+    types: ['js']
+  }])
+]
+if (process.env.NODE_ENV === 'production') {
   const compressionTest = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i
-  plugins = [
+  plugins.push(
     new CompressionPlugin({
       algorithm (input, compressionOptions, callback) {
         return zopfli.gzip(input, compressionOptions, callback)
@@ -20,15 +28,8 @@ if (process.env.NODE_ENV === "production") {
     new BrotliPlugin({
       test: compressionTest,
       minRatio: 0.9
-    }),
-    new AssetPartialsPlugin([{
-      to: '../templates/styles.html.ep',
-      types: ['css']
-    }, {
-      to: '../templates/scripts.html.ep',
-      types: ['js']
-    }])
-  ]
+    })
+  )
 }
 
 module.exports = {
@@ -37,9 +38,8 @@ module.exports = {
   chainWebpack: config => {
     config.plugin('copy').tap(args => {
       return [[
-        './src/favicon.ico',
-        {
-          from: './src/img',
+        './src/favicon.ico', {
+          from: './static/img',
           to: 'img'
         }
       ]]
@@ -51,8 +51,8 @@ module.exports = {
     })
   },
   configureWebpack: {
-		plugins
-	},
+    plugins
+  },
   indexPath: 'index.html',
   outputDir: 'public',
   productionSourceMap: false,

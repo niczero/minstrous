@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p public; vue-cli-service build",
+    "build": "mkdir -p public && vue-cli-service build && rsync -avPW static/ public/",
     "check": "vue-cli-service build --verbose",
     "lint": "vue-cli-service lint",
     "morbo": "dep/bin/morbo -l 'http://*:3030' bin/sampler &>>log/development.log",
@@ -30,6 +30,7 @@
     "brotli-webpack-plugin": "^1.0.0",
     "chai": "^4.1.2",
     "compression-webpack-plugin": "^2.0.0",
+    "material-colors": "^1.2.6",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"

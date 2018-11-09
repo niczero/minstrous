@@ -1,0 +1,4 @@
+% title 'About';
+<a href="https://mojolicious.org"><img src="/3rd/mojo_logo.png" alt="mojolicious"></a>
+<a href="https://vuejs.org"><img src="/3rd/vue_logo.png" alt="vue.js"></a>
+<h2>Credits</h2>
