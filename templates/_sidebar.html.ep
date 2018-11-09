@@ -1,6 +1,6 @@
 <nav class="barred__sidebar">
   <ul class="menu">
-    % for my $m (qw(about)) {
+    % for my $m (qw(dashboard about)) {
     <li class="menu__item">
       <a class="menu__link<%= ' active' if $m eq stash 'module' %>" href="<%= url_for $m %>"><%= ucfirst $m %></a>
     </li>

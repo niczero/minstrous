@@ -2,3 +2,45 @@
 <a href="https://mojolicious.org"><img src="/3rd/mojo_logo.png" alt="mojolicious"></a>
 <a href="https://vuejs.org"><img src="/3rd/vue_logo.png" alt="vue.js"></a>
 <h2>Credits</h2>
+<table>
+  <thead>
+    <th>Thanks to:</th>
+    <th>for:</th>
+    <th>because:</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://twitter.com/kraih">Sebastian Riedel</a></td>
+      <td><a href="https://mojolicious.org">Mojolicious</a></td>
+      <td>the most awesome of the server-side frameworks, possibly the first to support websockets!</td>
+    </tr>
+    <tr>
+      <td><a href="https://twitter.com/youyuxi?lang=en">Evan You</a></td>
+      <td><a href="https://vuejs.org">Vue.js</a></td>
+      <td>the most awesome of the client-side frameworks!</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/webpack/webpack/blob/master/README.md#thanks-to">JS Foundation et al</a></td>
+      <td><a href="https://webpack.js.org">Webpack</a></td>
+      <td>such a powerful processor/packer (and now integrated with Vue by Evan You)</td>
+    </tr>
+    <tr>
+      <td><a href="https://twitter.com/mxbck">Max Böck</a></td>
+      <td><a href="https://codepen.io/mxbck/pen/Qrjada">Grid Admin dashboard on codepen</a></td>
+      <td>a very elegant lightweight design</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Inspiration</h2>
+<ul>
+  <li><a href="https://material-ui.com/style/color#color-palette">Material Design palette</a>
+  </li>
+  <li><a href="https://material.io/tools/color">Material Design colour tool</a>
+  </li>
+  <li><a href="https://css-tricks.com/guides">CSS Tricks guides</a>
+  </li>
+  <li><a href="https://twitter.com/sarah_edo">Sarah Drasner</a>
+  </li>
+</ul>
+

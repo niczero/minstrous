@@ -1,0 +1,43 @@
+% title 'Dashboard';
+<div class="dashboard">
+  <div class="dashboard__item">
+    <div class="card c-card">
+      <div class="card-body">
+        <strong>41</strong> Foobars
+      </div>
+    </div>
+  </div>
+  <div class="dashboard__item">
+    <div class="card c-card">
+      <div class="card-body">
+        <strong>81.712</strong> Doohickeys
+      </div>
+    </div>
+  </div>
+  <div class="dashboard__item dashboard__item--full">
+    <div class="card">
+      <img src="https://imgs.xkcd.com/comics/decline.png" alt="" class="align-self-center">
+    </div>
+  </div>
+  <div class="dashboard__item dashboard__item--col">
+    <div class="card c-card">
+      <div class="card-body">A</div>
+    </div>
+  </div>
+  <div class="dashboard__item dashboard__item--col">
+    <div class="card c-card">
+      <div class="card-body">B</div>
+    </div>
+  </div>
+  <div class="dashboard__item dashboard__item--col">
+    <div class="card c-card">
+      <div class="card-body">C</div>
+    </div>
+  </div>
+  <div class="dashboard__item dashboard__item--col">
+    <div class="card c-card">
+      <div class="card-body">D</div>
+    </div>
+  </div>
+</div>
+<p>read more about this in <a href="https://mxb.at/blog/css-grid-admin-dashboard/">this blogpost</a>.</p>
