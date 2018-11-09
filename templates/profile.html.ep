@@ -1,0 +1,17 @@
+% title 'My preferences';
+<h2>Theme</h2>
+<p>It can be useful to adjust the colour palette of Sampler to suit your colour
+vision, your ambient lighting, or your mood.</p>
+<p>Here you can get a feel for the themes currently available, and if you like
+one, set it as your preferred theme.</p>
+<p>If you have a need for a custom theme, we can work with you to create one to
+your requirements.</p>
+
+<div data-nature="vue" class="dashboard">
+  <div class="dashboard__item">
+    <theme-swatch theme="dark"></theme-swatch>
+  </div>
+  <div class="dashboard__item">
+    <theme-swatch theme="teal"></theme-swatch>
+  </div>
+</div>

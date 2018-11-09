@@ -2,7 +2,7 @@ package Sampler;
 use Mojolicious -base;
 use 5.014;
 
-our $VERSION = 0.021;
+our $VERSION = 0.031;
 
 use Mojo::Util 'md5_sum';
 
@@ -38,8 +38,8 @@ sub add_routes {
 
   $r->get('/' => sub { $_[0]->redirect_to($_[0]->url_with('main')) })
     ->name('base');
-
   $r->get($_) for qw(main about dashboard);
+  $r->get('/theme/:theme')->to('Profile#theme')->name('theme');
 
   return $self;
 }
