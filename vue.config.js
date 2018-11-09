@@ -12,7 +12,7 @@ let plugins = [
     types: ['js']
   }])
 ]
-if (process.env.NODE_ENV === 'production') {
+if (process.env.RELEASE && process.env.RELEASE > 0) {
   const compressionTest = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i
   plugins.push(
     new CompressionPlugin({

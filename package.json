@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p public && vue-cli-service build && rsync -avPW static/ public/",
+    "build:release": "RELEASE=1 vue-cli-service build && rsync -avPW static/ public/",
     "check": "vue-cli-service build --verbose",
     "lint": "vue-cli-service lint",
     "morbo": "dep/bin/morbo -l 'http://*:3030' bin/sampler &>>log/development.log",

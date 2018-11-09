@@ -2,57 +2,120 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 // Override/set colour variables
-$white: #fff;
-$black: #000;
-$green: #00e389;
-$blue: #3399ff;
-$orange: #f26c22;
-$yellow: #ffd925;
-$red: #e5001e;
+$white: #fff !default;
+$gray-100: $md-grey-100 !default;
+$gray-200: $md-grey-200 !default;
+$gray-300: $md-grey-300 !default;
+$gray-400: $md-grey-400 !default;
+$gray-500: $md-grey-500 !default;
+$gray-600: $md-grey-600 !default;
+$gray-700: $md-grey-700 !default;
+$gray-800: $md-grey-800 !default;
+$gray-900: $md-grey-900 !default;
+$black: #000 !default;
+
+$blue:    $md-blue-grey-500 !default;
+$indigo:  $md-indigo-500 !default;
+$purple:  $md-deep-purple-500 !default;
+$pink:    $md-pink-500 !default;
+$red:     $md-red-500 !default;
+$orange:  $md-orange-500 !default;
+$yellow:  $md-yellow-500 !default;
+$green:   $md-green-500 !default;
+$teal:    $md-teal-500 !default;
+$cyan:    $md-cyan-500 !default;
 
 // Create grayscale
-$gray-dark: #292b2c;
-$gray: #3f3f3f;
-$gray-light: #7e7e7e;
-$gray-lighter: #ededed;
-$gray-lightest: #fafafa;
+$gray-dark: $md-grey-900 !default;
+$gray: $md-grey-800 !default;
+$gray-light: $md-grey-600 !default;
+$gray-lighter: $md-grey-200 !default;
+$gray-lightest: $md-grey-50 !default;
 
 // Set brand colours
-$primary: $blue;
-$success: $green;
-$info: $yellow;
-$warning: $orange;
-$danger: $red;
+$brand-1: #772e33 !default;
+$brand-1-dark: #47000c !default;
+$brand-1-light: #a95a5c !default;
+$brand-2: #654657 !default;
+$brand-2-dark: #3a1e2e !default;
+$brand-2-light: #937284 !default;
+
+$primary: $brand-1 !default;
+$secondary: $md-pink-400 !default;
+$success: $md-teal-a400 !default;
+$info: $md-blue-grey-500 !default;
+$warning: $md-yellow-a400 !default;
+$danger: $md-red-a700 !default;
 
 // Override button colours
-$btn-info-color: darken($info, 45);
+$btn-info-color: darken($info, 45) !default;
+$btn-primary-color: darken($primary, 45) !default;
+$btn-secondary-color: darken($secondary, 45) !default;
 
 // Override alert background colours
-$state-success-bg: lighten($success, 30);
-$state-info-bg: lighten($info, 30);
-$state-warning-bg: lighten($warning, 30);
-$state-danger-bg: lighten($danger, 45);
+$state-success-bg: lighten($success, 30) !default;
+$state-info-bg: lighten($info, 30) !default;
+$state-warning-bg: lighten($warning, 30) !default;
+$state-danger-bg: lighten($danger, 45) !default;
 
 // Override alert text colours
-$state-success-text: darken($success, 30);
-$state-info-text: darken($info, 30);
-$state-warning-text: darken($warning, 30);
-$state-danger-text: darken($danger, 10);
+$state-success-text: darken($success, 30) !default;
+$state-info-text: darken($info, 30) !default;
+$state-warning-text: darken($warning, 30) !default;
+$state-danger-text: darken($danger, 10) !default;
 
 // Override badges padding (doubled because otherwise too crammed)
-$badge-padding-x: 0.8em;
-$badge-padding-y: 0.4em;
+$badge-padding-x: 0.8em !default;
+$badge-padding-y: 0.4em !default;
 
 // Make badges normal instead of bold
-$badge-font-weight: normal;
-
-// Override fonts
-$font-family-sans-serif: 'Raleway', sans-serif;
-$font-family-serif: Georgia, 'Times New Roman', Times, serif;
-$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
-  'Courier New', monospace;
-$font-family-base: $font-family-sans-serif;
+$badge-font-weight: normal !default;
 
 // Set global options
-$enable-shadows: false;
-$enable-gradients: true;
+$spacer: 0.8rem !default;
+$grid-gutter-width: 20px !default;
+
+$link-hover-decoration: none !default;
+
+$border-radius:    3px !default;
+$border-radius-lg: 4px !default;
+$border-radius-sm: 2px !default;
+
+$font-size-base: 1rem !default;
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1 !default;
+$h6-font-size: $font-size-base * 0.85 !default;
+
+// Barred layout
+$barred-footer-height: 20px !default;
+$barred-sidebar-width: 160px !default;
+$barred-topbar-height: 40px !default;
+
+/* Background & foreground colours */
+$barred-content-bg: $md-light-green-50 !default;
+$barred-content-fg: $md-grey-800 !default;
+$barred-footer-bg: $md-teal-900 !default;
+$barred-footer-fg: $md-teal-800 !default;
+$barred-logo-bg: $md-teal-500 !default;
+$barred-logo-fg: $md-teal-50 !default;
+$barred-sidebar-bg: $md-teal-800 !default;
+$barred-sidebar-fg: $md-grey-300 !default;
+$barred-topbar-bg: $md-green-100 !default;
+$barred-topbar-fg: $md-blue-grey-700 !default;
+
+$component-active-bg: $primary !default;
+$component-active-fg: $white !default;
+
+// Standardise some UI treatments
+$global-transition: all 300ms ease-in-out !default;
+
+// In case you do not have control over generated 'width' and 'height'
+// attributes on 'img' elements in your markup, but still want the images to be
+// fluid, set this to 'false'.
+
+$sampler-static-images: true !default;
+
+$btn-ghost-border-width: 2px !default;

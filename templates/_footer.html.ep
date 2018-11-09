@@ -1,2 +1,10 @@
 <footer class="barred__footer">
+  <ul class="footer">
+    <li class="footer__item">nic.sandfield</li>
+    <li class="footer__item">2018-11-08 22:32:05</li>
+    <li class="footer__item">(233 ms)</li>
+  </ul>
+  <span>
+    &copy; 2018 Someone
+  </span>
 </footer>

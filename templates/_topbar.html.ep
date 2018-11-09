@@ -1,2 +1,11 @@
 <header class="barred__topbar">
+  <a href="#" class="logo">
+    <h1>MVS</h1>
+  </a>
+  <div class="toolbar">
+    <h2><%= title %></h2>
+    <a href="#" class="logout">
+      Sign In
+    </a>
+  </div>
 </header>
