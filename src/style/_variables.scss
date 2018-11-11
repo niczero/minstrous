@@ -89,6 +89,10 @@ $h4-font-size: $font-size-base * 1.25 !default;
 $h5-font-size: $font-size-base * 1 !default;
 $h6-font-size: $font-size-base * 0.85 !default;
 
+$font-family-sans-serif: Railway, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
 // Barred layout
 $barred-footer-height: 20px !default;
 $barred-sidebar-width: 160px !default;
@@ -119,3 +123,13 @@ $global-transition: all 300ms ease-in-out !default;
 $sampler-static-images: true !default;
 
 $btn-ghost-border-width: 2px !default;
+
+// Themes
+.swatch.dark {
+  background-color: $md-blue-grey-800;
+  color: $md-light-text-primary;
+}
+.swatch.teal {
+  background-color: $md-teal-500;
+  color: $md-dark-text-primary;
+}

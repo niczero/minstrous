@@ -1,6 +1,6 @@
 <template>
-<div class="card theme" :class="theme">
-  <h3 class="card-title">{{ theme }}</h3>
+<div class="card swatch" :class="theme">
+  <h3 class="card-title"><i class="fas fa-palette"></i> {{ theme }}</h3>
   <div class="card-body">
     <button @click="sample" class="btn">Try</button>
     <button @click="persist" class="btn">Save</button>
@@ -16,16 +16,22 @@ export default {
   },
   methods: {
     sample: function () {
-      let href = '/dist/css/app.' + this.theme + '.5b1a6aa3.css'
+      let href = '/sampler/theme/' + this.theme + '.css'
       let link = document.createElement('link')
       link.rel = 'stylesheet'
-      link.type = 'text/css'
+      link.title = 'theme'
       link.href = href
       link.onload = function (e) {
-        e.target.sheet.disabled = true
+        let len = document.styleSheets.length
+        for (let i = 0; i < len; ++i) {
+          let t = document.styleSheets[i].title
+          if (t && t === 'theme') {
+            document.styleSheets[i].disabled = true
+          }
+        }
+        e.target.sheet.disabled = false
       }
       document.head.appendChild(link)
-console.log(link)
     },
     persist: function () {
       alert('persist: ' + this.theme)
@@ -37,25 +43,22 @@ console.log(link)
 <style scoped lang="scss">
 @import '~material-colors/dist/colors.scss';
 
-.theme {
+.swatch {
   padding: 0.6rem;
   button {
-    margin-right: 1rem;
     background-color: $md-grey-300;
-    border: 1px 1px 1px 1px;
     border-color: $md-grey-700;
     border-width: 1px;
+    margin-right: var(--spacing);
+    &:last-child {
+      margin-right: 0;
+    }
   }
-  h3 {
-    padding: 1rem;
+  .card-title {
+    padding: calc(var(--spacing) * 0.6);
   }
-}
-.dark {
-  background-color: $md-blue-grey-800;
-  color: $md-light-text-primary;
-}
-.teal {
-  background-color: $md-teal-500;
-  color: $md-dark-text-primary;
+  .card-body {
+    padding: calc(var(--spacing) * 0.6);
+  }
 }
 </style>
