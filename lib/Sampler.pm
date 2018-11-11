@@ -2,7 +2,7 @@ package Sampler;
 use Mojolicious -base;
 use 5.014;
 
-our $VERSION = 0.031;
+our $VERSION = 0.041;
 
 use Mojo::Util 'md5_sum';
 
