@@ -1,8 +1,8 @@
-package Sampler;
+package Minstrous;
 use Mojolicious -base;
 use 5.014;
 
-our $VERSION = 0.051;
+our $VERSION = 0.101;
 
 use Mojo::Util 'md5_sum';
 
@@ -22,7 +22,7 @@ sub set_up {
   $self->plugin('RenderFile');
   $self->plugin('Reloader') if $self->mode eq 'development';
 
-  $self->defaults(layout => 'general', module => 'main');
+  $self->defaults(layout => 'barred', module => 'main');
   my $instance = qx(uname -a) . qx(pwd) . $Name . substr $self->mode, 0, 3;
   $self->secrets([ map md5_sum sprintf('%s%s%u%u',
       $instance, $_, (localtime)[5,7]), @{delete $config->{secrets}} ]);

@@ -1,5 +1,5 @@
 {
-  "name": "mojo-vue-sampler",
+  "name": "minstrous",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build:release": "RELEASE=1 vue-cli-service build && rsync -avPW static/ public/",
     "build:theme": "RELEASE=1 vue-cli-service build --dest /var/tmp/theme src/style/index.${THEME}.scss && mv /var/tmp/theme/css/app.*.css* static/css/ && rm static/css/app-${THEME}.* && for f in static/css/app.*.css*; do mv $f ${f/app/app-$THEME}; done",
     "lint": "vue-cli-service lint",
-    "morbo": "dep/bin/morbo -l 'http://*:3030' bin/sampler &>>log/development.log",
+    "morbo": "dep/bin/morbo -l 'http://*:3030' bin/minstrous &>>log/development.log",
     "serve": "vue-cli-service serve",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit \"test/unit/**/*.spec.js\""
@@ -38,8 +38,8 @@
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
   },
-  "homepage": "https://niczero.github.io/mojo-vue-sampler",
+  "homepage": "https://niczero.github.io/minstrous",
   "bugs": {
-    "url": "https://github.com/niczero/mojo-vue-sampler/issues"
+    "url": "https://github.com/niczero/minstrous/issues"
   }
 }

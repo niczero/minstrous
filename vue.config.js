@@ -33,7 +33,7 @@ if (process.env.RELEASE && process.env.RELEASE > 0) {
 }
 
 module.exports = {
-  baseUrl: process.env.RELEASE && process.env.RELEASE > 0 ? '/sampler' : '/',
+  baseUrl: process.env.RELEASE && process.env.RELEASE > 0 ? '/minstrous' : '/',
   chainWebpack: config => {
     config.plugin('copy').tap(args => {
       return [[
@@ -46,7 +46,7 @@ module.exports = {
     config.plugin('html').tap(args => {
       if (args.length > 0) {
         args[0].template = './src/index.html'
-        args[0].title = 'Mojo-Vue Sampler'
+        args[0].title = 'Minstrous'
       }
       return args
     })

@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     sample: function () {
-      let href = '/sampler/theme/' + this.theme + '.css'
+      let href = '/minstrous/theme/' + this.theme + '.css'
       let link = document.createElement('link')
       link.rel = 'stylesheet'
       link.title = 'theme'
