@@ -29,18 +29,27 @@
       <td><a href="https://codepen.io/mxbck/pen/Qrjada">Grid Admin dashboard on codepen</a></td>
       <td>a very elegant lightweight design</td>
     </tr>
+    <tr>
+      <td><a href="http://marcus.nordaaker.com">Marcus Ramberg</a></td>
+      <td><a href="https://metacpan.org/pod/Mojolicious::Plugin::TextExceptions">TextException plugin for Mojolicious</a></td>
+      <td>making it easier to test exceptions</td>
+    </tr>
   </tbody>
 </table>
 
 <h2>Inspiration</h2>
 <ul>
-  <li><a href="https://material-ui.com/style/color#color-palette">Material Design palette</a>
+  <li>
+    <a href="https://material-ui.com/style/color#color-palette">Material Design palette</a>
   </li>
-  <li><a href="https://material.io/tools/color">Material Design colour tool</a>
+  <li>
+    <a href="https://material.io/tools/color">Material Design colour tool</a>
   </li>
-  <li><a href="https://css-tricks.com/guides">CSS Tricks guides</a>
+  <li>
+    <a href="https://css-tricks.com/guides">CSS Tricks guides</a>
   </li>
-  <li><a href="https://twitter.com/sarah_edo">Sarah Drasner</a>
+  <li>
+    <a href="https://twitter.com/sarah_edo">Sarah Drasner</a>
   </li>
 </ul>
 

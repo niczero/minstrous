@@ -17,6 +17,7 @@ recommends 'Net::DNS::Native';  # bin
 
 on develop => sub {
   requires 'Mojolicious::Plugin::Reloader';
+  requires 'Mojolicious::Plugin::TextExceptions';
 };
 
 on test => sub {
